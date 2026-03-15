@@ -1,0 +1,27 @@
+project:
+  name: "demo_sc_multi_spatial"
+  species: "human"
+  owner: "your_name"
+
+io:
+  raw_data_dir: "data/raw"
+  processed_dir: "data/processed"
+  results_dir: "data/results"
+
+samples:
+  - sample_id: "S1"
+    modality: "scrna"
+    path: "data/raw/S1"
+  - sample_id: "S2"
+    modality: "spatial"
+    path: "data/raw/S2"
+
+qc:
+  min_genes: 200
+  max_genes: 6000
+  max_mt_pct: 20
+
+analysis:
+  normalize_method: "log1p"
+  batch_key: "batch"
+  resolution: 0.6
